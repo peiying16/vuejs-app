@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>vue-js-app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div id="app" class="container">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <router-link class="navbar-brand" to="/">Monitor</router-link>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><router-link to="/">Home</router-link></li>
+              <li><router-link to="/checks">Checks</router-link></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <router-view></router-view>
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
