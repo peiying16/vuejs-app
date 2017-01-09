@@ -1,9 +1,9 @@
 // src/main.js
 
 import Vue from 'vue'
-import Checks from './components/Checks.vue'
-import CheckDetail from './components/CheckDetail.vue'
-import CheckCreate from './components/CheckCreate.vue'
+import CheckList from './components/CheckList.vue'
+import CheckForm from './components/CheckForm.vue'
+import UserList from './components/UserList.vue'
 import 'bootstrap/dist/css/bootstrap.css'
 
 import VueRouter from 'vue-router'
@@ -11,9 +11,10 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/check/:id', component: CheckDetail },
-  { path: '/check', component: CheckCreate },
-  { path: '/checks', component: Checks },
+  { path: '/check/:id', component: CheckForm },
+  { path: '/check', component: CheckForm },
+  { path: '/checks', component: CheckList },
+  { path: '/users', component: UserList },
   { path: '/*', redirect: '/checks' }
 ]
 
