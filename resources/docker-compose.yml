@@ -13,4 +13,4 @@ services:
     build: ./app
     volumes:
       - ../:/srv/app
-    command: /srv/app/server/index.js
+    command: ["node", "/srv/app/server/index.js"]

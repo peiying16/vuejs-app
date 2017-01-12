@@ -1,13 +1,12 @@
-import http from 'http';
-import express from 'express';
+const express = require("express");
 
-let app = express();
-app.server = http.createServer(app);
+let app = express()
 
-app.server.get('/', (req, res) => res.send('Hello World!'));
+// respond with "hello world" when a GET request is made to the homepage
+app.get('/', function (req, res) {
+  res.send('hello world')
+})
 
-app.server.listen(process.env.PORT || 9000);
-
-console.log(`Started on port ${app.server.address().port}`);
-
-export default app;
+app.listen(9000, function () {
+  console.log('Started app listening on port 9000!')
+})
