@@ -1,0 +1,16 @@
+version: "2"
+
+services:
+
+  nginx:
+    build: nginx
+    volumes:
+      - ../:/srv/app
+    ports:
+      - 8088:80
+
+  app:
+    build: ./app
+    volumes:
+      - ../:/srv/app
+    command: /srv/app/server/index.js
