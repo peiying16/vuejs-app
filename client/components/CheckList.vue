@@ -2,7 +2,7 @@
   <div class="checks">
 
     <div class="clearfix mb-3">
-      <h2 class="float-left">System Status</h2>
+      <h2 class="float-left">System </h2>
       <router-link class="btn btn-success float-right" to="/check" role="button">Create Check</router-link>
     </div>
 

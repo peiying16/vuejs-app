@@ -3,7 +3,7 @@ version: "2"
 services:
 
   nginx:
-    build: nginx
+    build: ./nginx
     volumes:
       - ../:/srv/app
     ports:
@@ -13,4 +13,11 @@ services:
     build: ./app
     volumes:
       - ../:/srv/app
-    command: ["node", "/srv/app/server/index.js"]
+    command: ["node_modules/.bin/nodemon", "server/index.js", "--watch", "server"]
+
+  build-app:
+    build: ./app
+    volumes:
+      - ../:/srv/app
+    command: ["node_modules/.bin/webpack", "--config", "webpack.config.js", "--watch", "--progress"]
+
